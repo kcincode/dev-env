@@ -55,6 +55,14 @@ copy() {
   fi
 }
 
+# check if .config folder exists
+if [[ ! -d $XDG_CONFIG_HOME ]]; then
+  log "creating: $XDG_CONFIG_HOME"
+  if [[ $dry_run == "0" ]]; then
+    mkdir -p $XDG_CONFIG_HOME
+  fi
+fi
+
 update_files $DEV_ENV_HOME/env/.config $XDG_CONFIG_HOME
 copy $DEV_ENV_HOME/env/.zshrc $HOME/.zshrc
 
