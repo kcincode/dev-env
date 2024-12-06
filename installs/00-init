@@ -27,4 +27,15 @@ sudo dnf install tmux neovim -y
 
 curl -sS https://starship.rs/install.sh | sh
 
+# Meso Nerd Font
+curl -OL https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Meslo.tar.xz
+sudo mkdir -p /usr/local/share/fonts/Meslo
+sudo mv Meslo.tar.xz /usr/local/share/fonts/Meslo/
+cd /usr/local/share/fonts/Meslo && sudo tar -xf Meslo.tar.xz && cd --
+sudo rm /usr/local/share/fonts/Meslo/Meslo.tar.xz
+sudo chown -R root: /usr/local/share/fonts/Meslo
+sudo chmod 644 /usr/local/share/fonts/Meslo/*
+sudo restorecon -vFr /usr/local/share/fonts/Meslo
+sudo fc-cache -v
+
 sudo hostnamectl set-hostname "EA24-00123"
