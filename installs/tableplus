@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+arch=$(uname -m)
+
+if [[ "$arch" == "aarch64" ]]; then
+  sudo rpm -v --import https://yum.tableplus.com/apt.tableplus.com.gpg.key
+  sudo dnf config-manager addrepo --from-repofile https://yum.tableplus.com/rpm/arm64/tableplus.repo
+  sudo dnf install tableplus -y
+else
+  sudo rpm -v --import https://yum.tableplus.com/apt.tableplus.com.gpg.key
+  sudo dnf config-manager addrepo --from-repofile https://yum.tableplus.com/rpm/x86_64/tableplus.repo
+  sudo dnf install tableplus -y
+fi

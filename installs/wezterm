@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo dnf copr enable wezfurlong/wezterm-nightly -y
+sudo dnf install wezterm -y

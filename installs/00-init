@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# Make dnf faster
+if grep -q "max_parallel_downloads" /etc/dnf/dnf.conf; then
+else
+  echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf
+fi
+
+if grep -q "fastestmirror" /etc/dnf/dnf.conf; then
+else
+  echo "fastestmirror=true" | sudo tee -h /etc/dnf/dnf.conf
+fi
+
+# Update the system
+sudo dnf update -y
+
+# enable RPM fusion
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf4 update @core -y
+
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
+sudo dnf4 update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+
+sudo dnf install gnome-tweaks gnome-extensions-app -y
+
+sudo dnf install tmux neovim -y
+
+curl -sS https://starship.rs/install.sh | sh
+
+sudo hostnamectl set-hostname "EA24-00123"
