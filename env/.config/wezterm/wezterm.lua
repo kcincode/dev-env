@@ -5,9 +5,8 @@ config.max_fps = 120
 
 config.color_scheme = "catppuccin-mocha"
 
-config.font = wezterm.font("MesloLGS NF")
-config.font_size = 18
-config.dpi = 144.0
+config.font = wezterm.font("MesloLGS Nerd Font")
+config.font_size = 14
 
 config.initial_cols = 90
 config.initial_rows = 32

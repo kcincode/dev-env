@@ -25,7 +25,9 @@ sudo dnf4 update @multimedia --setopt="install_weak_deps=False" --exclude=Packag
 
 sudo dnf install gnome-tweaks gnome-extensions-app -y
 
-sudo dnf install tmux neovim git -y
+sudo dnf install tmux neovim git zsh -y
+
+sudo chsh -s $(which zsh) fellw9
 
 curl -sS https://starship.rs/install.sh | sh
 
