@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# install pyenv
+curl https://pyenv.run | bash
+
+# install virtualenvwrapper
+sudo dnf install python3-virtualenvwrapper -y
+
+
