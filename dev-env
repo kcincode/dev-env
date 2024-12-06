@@ -67,4 +67,5 @@ fi
 update_files $DEV_ENV_HOME/env/.config $XDG_CONFIG_HOME
 copy $DEV_ENV_HOME/env/.zshrc $HOME/.zshrc
 
-echo "Run ./install to install all dependencies"
+echo "All Done! Restart shell to see changes"
+exec /bin/zsh
