@@ -2,11 +2,13 @@
 
 # Make dnf faster
 if grep -Fxq "max_parallel_downloads=10" /etc/dnf/dnf.conf; then
+  echo "Skipping max_parallel_downloads config"
 else
   echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf
 fi
 
 if grep -Fxq "fastestmirror=true" /etc/dnf/dnf.conf; then
+  echo "Skipping fastestmirror config"
 else
   echo "fastestmirror=true" | sudo tee -h /etc/dnf/dnf.conf
 fi
