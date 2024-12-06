@@ -11,6 +11,10 @@ stty -ixon
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# setup python stuff
+eval "$(pyenv init -)"
+source /usr/bin/virtualenvwrapper.sh
+
 # Tmux
 # Always work in a tmux session if Tmux is installed
 if which tmux 2>&1 >/dev/null; then
