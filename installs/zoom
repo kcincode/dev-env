@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+arch=$(uname -m)
+
+if [[ "$arch" == "aarch64" ]]; then
+  echo "No ARM support for Zoom in Fedora"
+else
+  curl -OL https://zoom.us/client/6.2.11.5069/zoom_x86_64.rpm
+  sudo dnf install -y zoom_x86_64.rpm
+  rm zoom_x86_64.rpm
+fi
