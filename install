@@ -25,7 +25,7 @@ log() {
 
 log "RUN: env: $env -- grep: $grep"
 
-runs_dir=$(find $script_dir/installs -mindepth 1 -maxdepth 1 -perm +0111 -type f)
+runs_dir=$(find $script_dir/installs -mindepth 1 -maxdepth 1 -executable -type f)
 
 for s in $runs_dir; do
   if echo "$s" | grep -vq "$grep"; then
