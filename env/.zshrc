@@ -12,6 +12,8 @@ stty -ixon
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # setup python stuff
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 source /usr/bin/virtualenvwrapper.sh
 

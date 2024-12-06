@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # install pyenv
+rm -rf ~/.pyenv
 curl https://pyenv.run | bash
 
 # install virtualenvwrapper
