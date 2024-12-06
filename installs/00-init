@@ -28,6 +28,9 @@ sudo dnf install gnome-tweaks gnome-extensions-app -y
 
 sudo dnf install tmux neovim git zsh -y
 
+git config --global user.email "nicholas.felicelli@cchmc.org"
+git config --global user.name "Nick Felicelli"
+
 sudo chsh -s $(which zsh) $(whoami)
 
 curl -sS https://starship.rs/install.sh | sh
