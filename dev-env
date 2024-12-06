@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 dry_run="0"
+DEV_ENV_HOME=$HOME/dev-env
 
 if [ -z "$DEV_ENV_HOME" ]; then
   echo "env var $DEV_ENV_HOME needs to be present"
