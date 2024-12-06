@@ -3,6 +3,4 @@
 # install pnpm and node
 sudo dnf install pnpm -y
 
-# install bun
-curl -fsSL https://bun.sh/install | bash
-
+# BUN is installed elsewhere due to it modifying zshrc

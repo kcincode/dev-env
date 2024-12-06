@@ -65,6 +65,10 @@ if [[ ! -d $XDG_CONFIG_HOME ]]; then
 fi
 
 update_files $DEV_ENV_HOME/env/.config $XDG_CONFIG_HOME
+
+# installing bun here so we can overwrite the zshrc config
+curl -fsSL https://bun.sh/install | bash
+
 copy $DEV_ENV_HOME/env/.zshrc $HOME/.zshrc
 
 echo "All Done! Restart shell to see changes"
