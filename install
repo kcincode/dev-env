@@ -39,5 +39,3 @@ for s in $runs_dir; do
     $s
   fi
 done
-
-./dev-env

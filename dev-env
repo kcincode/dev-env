@@ -70,7 +70,6 @@ update_files $DEV_ENV_HOME/env/.config $XDG_CONFIG_HOME
 curl -fsSL https://bun.sh/install | bash
 
 copy $DEV_ENV_HOME/env/.zshrc $HOME/.zshrc
-copy $DEV_ENV_HOME/env/docker-daemon.json /etc/docker/daemon.json
+sudo cp $DEV_ENV_HOME/env/docker-daemon.json /etc/docker/daemon.json
 
-echo "All Done! Restart shell to see changes"
-exec /bin/zsh
+echo "All Done! Restart to see changes"

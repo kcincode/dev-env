@@ -32,3 +32,5 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)

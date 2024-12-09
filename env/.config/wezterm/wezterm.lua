@@ -12,6 +12,7 @@ config.initial_cols = 90
 config.initial_rows = 32
 
 config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.9
 config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
 config.show_tabs_in_tab_bar = false
