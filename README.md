@@ -1,4 +1,4 @@
-# Setup a Fedora Linux machine
+# Setup a Fedora Linux machine running Gnome
 
 ## Run
 
