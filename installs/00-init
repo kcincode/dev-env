@@ -46,4 +46,4 @@ sudo chmod 644 /usr/local/share/fonts/Meslo/*
 sudo restorecon -vFr /usr/local/share/fonts/Meslo
 sudo fc-cache -v
 
-sudo hostnamectl set-hostname "EA24-00123"
+sudo hostnamectl set-hostname "EW24-03310"
