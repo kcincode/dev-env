@@ -12,7 +12,6 @@
 - Javascript (pnpm)
 - Python (pyenv, virtualenv)
 - TablePlus
-- WezTerm
+- Kitty
 - Zed
 - Zoom
-- Hyprland (optional WM)
