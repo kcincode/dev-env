@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+INIT=0
+
+if [[ ! -d "/var/lib/pgsql" ]]; then
+  INIT=1
+fi
+
+sudo dnf install postgresql-server postgresql-contrib -y
+sudo systemctl enable postgresql
+
+if [ $INIT -eq 1 ]; then
+  echo "Initializing Postgres Server"
+  sudo postgresql-setup --initdb --unit postgresql
+
+  sudo systemctl restart postgresql
+
+  echo "Update $(postgres) user password"
+  echo "RUN: \password postgres"
+  sudo -u postgres psql
+
+  echo "Edit the /var/lib/pgsql/data/pg_hba.conf"
+  echo "Change:"
+  echo "  host all all 127.0.0.1/32 ident"
+  echo "TO:"
+  echo "host all all 127.0.0.1/32 md5"
+
+else
+  echo "NOT Initializing"
+fi
