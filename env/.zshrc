@@ -1,5 +1,8 @@
 export EDITOR="vim"
 
+# auto completions for zsh
+source $HOME/.local/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # starship prompts
 eval "$(starship init zsh)"
 
