@@ -76,7 +76,4 @@ fi
 copy $DEV_ENV_HOME/env/.zshrc $HOME/.zshrc
 sudo cp $DEV_ENV_HOME/env/docker-daemon.json /etc/docker/daemon.json
 
-gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 18
-gsettings set org.gnome.desktop.peripherals.keyboard delay 250
-
 echo "All Done! Restart to see changes"

@@ -21,12 +21,8 @@ sudo dnf install dnf-plugins-core -u -y
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf4 update @core -y
 
-sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
-sudo dnf4 update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
 
-sudo dnf install gnome-tweaks gnome-extensions-app -y
-
-sudo dnf install tmux neovim git zsh vlc pinta fzf ripgrep golang python3-devel akmod-nvidia awscli2 -y
+sudo dnf install tmux git zsh fzf ripgrep akmod-nvidia -y
 
 git config --global user.email "nicholas.felicelli@cchmc.org"
 git config --global user.name "Nick Felicelli"
