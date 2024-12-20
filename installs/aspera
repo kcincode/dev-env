@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+if [[ -d "$HOME/.aspera/connect" ]]; then
+  echo "Skipping Aspera Connect, already installed"
+  exit 0
+fi
+
+
+# download the aspera connect file
+wget -O /tmp/aspera.tar.gz https://d3gcli72yxqn2z.cloudfront.net/connect/v4/bin/ibm-aspera-connect-3.11.2.63-linux-g2.12-64.tar.gz
+
+# uncompress the downloaded file
+cd /tmp && tar zxvf aspera.tar.gz
+
+# install the aspera connect
+cd /tmp && sh ibm-aspera-connect-3.11.2.63-linux-g2.12-64.sh
+
+# cleanup the files
+rm /tmp/ibm-aspera-connect-3.11.2.63-linux-g2.12-64.sh
+rm /tmp/aspera.tar.gz
