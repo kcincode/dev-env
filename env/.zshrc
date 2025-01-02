@@ -1,8 +1,5 @@
 export EDITOR="vim"
 
-# auto completions for zsh
-source $HOME/.local/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 # starship prompts
 eval "$(starship init zsh)"
 
@@ -43,3 +40,7 @@ export PATH="$HOME/.aspera/connect/bin:$PATH"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# auto completions for zsh
+source $HOME/.local/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
